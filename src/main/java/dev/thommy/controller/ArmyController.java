@@ -23,6 +23,14 @@ public class ArmyController {
         return armyService.findAllArmies();
     }
 
+    @Path("/army/{id}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public ArmyEntity findById(Long id) throws Exception {
+        return armyService.findById(id);
+    }
+
+
     @Path("/hello")
     @GET
     @Produces(MediaType.TEXT_PLAIN)

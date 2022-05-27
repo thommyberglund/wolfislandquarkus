@@ -19,6 +19,15 @@ public class ArmyService {
         return armyRepository.findAll().list();
     }
 
+    public ArmyEntity findById(Long id) throws Exception {
+        try {
+            return armyRepository.findById(id);
+        }
+        catch(Exception e) {
+            throw new Exception("Ngt gick fel");
+        }
+    }
+
     @Transactional
     public void create() {
         ArmyEntity a = new ArmyEntity("Testar",1, ArmyEnum.DEATH_GUARD);

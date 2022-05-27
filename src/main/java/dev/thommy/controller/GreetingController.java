@@ -9,12 +9,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/wolfisland")
-public class GreetingResource {
+public class GreetingController {
 
     @GET
     @Transactional
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
+
 
         GreetingEntity greetingEntity = new GreetingEntity();
         greetingEntity.setMessage("hello");
